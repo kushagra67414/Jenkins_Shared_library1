@@ -4,7 +4,7 @@ def call(String repoUrl) {
   pipeline {
        agent any
        tools {
-           maven 'Maven 3.5.0'
+           maven 'maven 3.8.5'
            }
        stages {
            stage("Tools initialization") {
@@ -15,7 +15,7 @@ def call(String repoUrl) {
            }
            stage("Checkout Code") {
                steps {
-                   git branch: 'master',
+                   git branch: 'main',
                        url: "${repoUrl}"
                }
            }
